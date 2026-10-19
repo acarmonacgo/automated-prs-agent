@@ -25,3 +25,10 @@ def deduplicate(signatures: Iterable[Signature]) -> list[Signature]:
             unique.append(signature)
 
     return unique
+
+
+def top_petitions(signatures, n):
+    """Return the IDs of the n petitions with the most signatures."""
+    counts = count_by_petition(signatures)
+    print("Petition signature counts:", counts)
+    return sorted(counts, key=counts.get)[:n]
