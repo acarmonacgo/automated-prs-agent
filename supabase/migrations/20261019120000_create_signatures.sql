@@ -3,7 +3,8 @@ CREATE TABLE signatures (
     petition_id bigint NOT NULL,
     email text NOT NULL,
     country_code text NOT NULL,
-    signed_at timestamptz NOT NULL
+    signed_at timestamptz NOT NULL,
+    source text
 );
 
 CREATE UNIQUE INDEX signatures_petition_id_lower_email_idx
